@@ -37,13 +37,8 @@ class FiguresController < ApplicationController
   end
   
   patch '/figures/:id' do 
-    # if !params[:owner].keys.include?("pet_ids")
-    # params[:owner]["pet_ids"] = []
-    # end
     @figure.update(params["name"])
-    # if !params["pet"]["name"].empty?
-    #   @owner.pets << Pet.create(name: params["pet"]["name"])
-    # end
+
     redirect "figures/#{@figure.id}"
   end
   
